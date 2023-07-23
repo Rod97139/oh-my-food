@@ -1,0 +1,85 @@
+.btn {
+  border-radius: 20px;
+}
+
+.navbar {
+  display: flex;
+  margin-block: 1rem;
+}
+.navbar__home {
+  margin-inline: auto;
+}
+.navbar__previous {
+  position: absolute;
+}
+
+.footer {
+  background-color: #353535;
+}
+
+.location {
+  background-color: #EAEAEA;
+  text-align: center;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.tutorial__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.tutorial__container__stage {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid;
+  width: 300px;
+  margin: auto;
+  padding: 10px 0 10px 0;
+  margin-block: 20px;
+}
+.tutorial__container__stage__logo {
+  position: absolute;
+  transform: translateX(-40px);
+}
+.tutorial__container__stage__number {
+  position: absolute;
+  transform: translateX(-150px);
+  border: 1px solid;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: #9356DC;
+  color: white;
+}
+
+.restaurant__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+.card .card-image {
+  object-fit: cover;
+  width: 100%;
+  height: 136px;
+  border-radius: 20px 20px 0 0;
+}
+.card .card-content {
+  display: flex;
+  justify-content: space-between;
+}
+.card .card-content .card-like {
+  margin-block: auto;
+}
+
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,20 @@
+.btn {
+  border-radius: 20px;
+}
+
+.navbar {
+  display: flex;
+  margin-block: 1rem;
+}
+.navbar__home {
+  margin-inline: auto;
+}
+.navbar__previous {
+  position: absolute;
+}
+
+.footer {
+  background-color: #353535;
+}
+
+/*# sourceMappingURL=menu.css.map */

@@ -1,0 +1,11 @@
+
+.navbar {
+    display: flex;
+    margin-block: 1rem;
+    &__home {
+        margin-inline: auto;
+    }
+    &__previous {
+        position: absolute;
+    }
+}
