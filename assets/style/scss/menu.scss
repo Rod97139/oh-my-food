@@ -2,3 +2,35 @@
 @import "partials/settings";
 @import "partials/nav";
 @import "partials/footer";
+
+
+.menu {
+    
+    
+    &__image {
+        width: 100%;
+    }
+    
+    &__content {
+        transform: translateY(-50px);
+        border-radius: 20px 20px 0 0;
+        background-color: #F6F6F6;
+        
+        &__title {
+            display: flex;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+
+        &__logo {
+            margin-block: auto;
+        }
+
+        &__form {
+            background-color: #F6F6F6;
+            height: 400px;
+        }
+    }
+
+  
+}

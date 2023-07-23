@@ -2,6 +2,10 @@
   border-radius: 20px;
 }
 
+body {
+  margin: 0;
+}
+
 .navbar {
   display: flex;
   margin-block: 1rem;

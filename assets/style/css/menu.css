@@ -2,6 +2,10 @@
   border-radius: 20px;
 }
 
+body {
+  margin: 0;
+}
+
 .navbar {
   display: flex;
   margin-block: 1rem;
@@ -15,6 +19,27 @@
 
 .footer {
   background-color: #353535;
+}
+
+.menu__image {
+  width: 100%;
+}
+.menu__content {
+  transform: translateY(-50px);
+  border-radius: 20px 20px 0 0;
+  background-color: #F6F6F6;
+}
+.menu__content__title {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.menu__content__logo {
+  margin-block: auto;
+}
+.menu__content__form {
+  background-color: #F6F6F6;
+  height: 400px;
 }
 
 /*# sourceMappingURL=menu.css.map */
