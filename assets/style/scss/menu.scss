@@ -2,7 +2,8 @@
 @import "partials/settings";
 @import "partials/nav";
 @import "partials/footer";
-
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .menu {
     
@@ -17,6 +18,8 @@
         background-color: #F6F6F6;
         
         &__title {
+            font-family: 'Shrikhand', cursive;
+            font-size: 1.5rem;
             display: flex;
             justify-content: space-around;
             box-sizing: border-box;
@@ -27,8 +30,20 @@
         }
 
         &__form {
+            font-family: 'Roboto', sans-serif;
             background-color: #F6F6F6;
-            height: 400px;
+            &__ingredient {
+                display: flex;
+                flex-direction: column;
+                font-weight: lighter;
+                
+                input[type="checkbox"] + label {
+                }
+                
+                input[type="checkbox"]:checked + label {
+                    background-color: red;
+                }
+            }
         }
     }
 

@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .btn {
   border-radius: 20px;
 }
 
 body {
   margin: 0;
+}
+body main {
+  background-color: #F6F6F6;
 }
 
 .navbar {
@@ -30,6 +35,8 @@ body {
   background-color: #F6F6F6;
 }
 .menu__content__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
@@ -38,8 +45,16 @@ body {
   margin-block: auto;
 }
 .menu__content__form {
+  font-family: "Roboto", sans-serif;
   background-color: #F6F6F6;
-  height: 400px;
+}
+.menu__content__form__ingredient {
+  display: flex;
+  flex-direction: column;
+  font-weight: lighter;
+}
+.menu__content__form__ingredient input[type=checkbox]:checked + label {
+  background-color: red;
 }
 
 /*# sourceMappingURL=menu.css.map */

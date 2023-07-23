@@ -5,6 +5,9 @@
 body {
   margin: 0;
 }
+body main {
+  background-color: #F6F6F6;
+}
 
 .navbar {
   display: flex;
