@@ -38,10 +38,45 @@
                 font-weight: lighter;
                 
                 input[type="checkbox"] + label {
+                    max-width: 348px;
+                    // border: 1px solid;
+                    margin: 10px;
+                    padding: 0 10px;
+                    background-color: white;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    overflow: hidden;
+
+                    .price {
+                        margin-top: 50px;
+                        span {
+
+                        }
+                    }
+
+                    .check {
+                        width: 92px;
+                        background-color: #99E2D0;
+                        display: none;
+                        margin-right: 0;
+                        position: relative;
+                        right: -20px;
+                        
+
+                        svg {
+                            margin: auto 10px auto 27px;
+                        }
+                    }
+                    
+                  
                 }
                 
                 input[type="checkbox"]:checked + label {
-                    background-color: red;
+                    // background-color: red;
+                    .check {
+                        display: flex;
+                    }
                 }
             }
         }

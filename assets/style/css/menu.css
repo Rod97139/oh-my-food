@@ -53,8 +53,32 @@ body main {
   flex-direction: column;
   font-weight: lighter;
 }
-.menu__content__form__ingredient input[type=checkbox]:checked + label {
-  background-color: red;
+.menu__content__form__ingredient input[type=checkbox] + label {
+  max-width: 348px;
+  margin: 10px;
+  padding: 0 10px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.menu__content__form__ingredient input[type=checkbox] + label .price {
+  margin-top: 50px;
+}
+.menu__content__form__ingredient input[type=checkbox] + label .check {
+  width: 92px;
+  background-color: #99E2D0;
+  display: none;
+  margin-right: 0;
+  position: relative;
+  right: -20px;
+}
+.menu__content__form__ingredient input[type=checkbox] + label .check svg {
+  margin: auto 10px auto 27px;
+}
+.menu__content__form__ingredient input[type=checkbox]:checked + label .check {
+  display: flex;
 }
 
 /*# sourceMappingURL=menu.css.map */
