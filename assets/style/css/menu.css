@@ -6,6 +6,8 @@
 
 body {
   margin: 0;
+  max-width: 1440px;
+  margin-inline: auto;
 }
 body main {
   background-color: #F6F6F6;
@@ -34,6 +36,12 @@ body main {
   border-radius: 20px 20px 0 0;
   background-color: #F6F6F6;
 }
+@media (min-width: 1024px) {
+  .menu__content {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
 .menu__content__title {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
@@ -52,6 +60,16 @@ body main {
   display: flex;
   flex-direction: column;
   font-weight: lighter;
+}
+.menu__content__form__ingredient .command {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  width: 186px;
+  height: 50px;
+  border: none;
+  color: white;
+  margin: 50px auto 0 auto;
+  font-size: large;
 }
 .menu__content__form__ingredient input[type=checkbox] + label {
   max-width: 348px;
