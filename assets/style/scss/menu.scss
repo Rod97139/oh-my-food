@@ -15,7 +15,7 @@
     &__content {
      
         transform: translateY(-50px);
-        border-radius: 20px 20px 0 0;
+        border-radius: 40px 40px 0 0;
         background-color: #F6F6F6;
         display: flex;
         flex-direction: column;
@@ -42,18 +42,95 @@
 
 
         &__form {
-            @media (min-width: 1024px) {
-                
-            }
             font-family: 'Roboto', sans-serif;
+            font-size: 0.8rem;
             background-color: #F6F6F6;
+            width: 100%;
+
             
             &__ingredient {
                 display: flex;
                 flex-direction: column;
                 font-weight: lighter;
 
+                input[type="checkbox"] + label {
+                    // width: 349px;
+                    // width: 100%;
+                    // max-width: 100%;
+                    margin: 10px;
+                    height: 90px;
+                    padding: 0 10px;
+                    background-color: white;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    position: relative;
+
+
+                    .name {
+                        // text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: auto;
+                        z-index: 2;
+                        // flex-shrink: 0;
+                    }
+
+                    .price-check {
+                        display: flex;
+                        position: absolute;
+                        transform: translateX(83%);
+                        right: 10px;
+                        transition: right 0.5s ease-in-out;
+
+                        .price {
+                            margin-top: 50px;
+                            margin-right: 10px;
+                        }
+    
+                        .check {
+                          
+                            background-color: #99E2D0;
+                            display: flex;
+                            height: 90px;
+                            width: 92px;
+
+                            svg {
+                                margin: auto 10px auto 27px;
+                            }
+                        }
+                        
+                    }
+                  
+                }
                 
+                @media (hover: hover) {
+
+                    input[type="checkbox"]:hover + label {
+                        .price-check {
+                            right: 86px;
+                        }
+                    }
+                    
+                }
+              
+
+
+                input[type="checkbox"]:checked + label {
+                    
+
+                    .name {
+                        // trois petits points
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        // width:50%;
+                    }
+
+                    .price-check {
+                        right: 86px;
+                    }
+                }
 
                 .command {
                     background: linear-gradient(#FF79DA, #9356DC);
@@ -65,99 +142,14 @@
                     margin: 50px auto 0 auto;
                     font-size: large;
                 }
-                
-                input[type="checkbox"] + label {
-                    width: 349px;
-                    // max-width: 100%;
-                    margin: 10px;
-                    height: 90px;
-                    padding: 0 10px;
-                    background-color: white;
-                    border-radius: 20px;
-                    display: flex;
-                    justify-content: space-between;
-                    overflow: hidden;
-                    position: relative;
-                    .name {
-                        flex-shrink: 0;
-                        // width:264px;
-                    }
-
-                    
-                    .price {
-                        margin: 0;
-                        margin-top: 50px;
-                        padding: 0;
-                        position: relative;
-                        // align-items: flex-end;
-                        right: 0;
-                        // bottom: -12px;
-                        transition: flex-basis 0.5s ease-out;
-                        // margin-left: 50px;
-                        // span {
-
-                        // }
-                    }
-
-                    .check {
-                      
-                        background-color: #99E2D0;
-                        // display: none;
-                        display: flex;
-                        margin-right: 0;
-                        position: absolute;
-                        height: 90px;
-                        width: 92px;
-                        right: -100px;
-                        transition: all 0.5s ease-out;
-                        
-
-                        svg {
-                            margin: auto 10px auto 27px;
-                        }
-                    }
-                    
-                  
-                }
-                
-                input[type="checkbox"]:checked + label {
-                    position: relative;
-                    width: 349px;
-                    // background-color: red;
-
-                    .name {
-                        // trois petits points
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        width:200px;
-                    }
-                    .check {
-                        display: flex;
-                        position: relative;
-                        right: -10px;
-                        
-                        transition: all 0.5s ease-out;
-
-                    }
-
-                    .price {
-                        // position: relative;
-                        
-                        transition: flex-basis 0.5s ease-out;
-                        // margin: 0;
-                        // margin-top: 50px;
-                        // padding: 0;
-                    }
-                }
             }
         }
         // ==> &__content
         @media (min-width: 1024px) {
 
-            width: 60%;
+            width: 50%;
             margin-inline: auto;
-            padding-inline: 5rem ;
+            padding-inline: 12rem ;
             
             
         }

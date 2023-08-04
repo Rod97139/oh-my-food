@@ -10,6 +10,11 @@ body {
 body main {
   background-color: #F6F6F6;
 }
+@media (min-width: 1024px) {
+  body main {
+    background-color: white;
+  }
+}
 
 .navbar {
   display: flex;
