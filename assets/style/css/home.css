@@ -83,6 +83,7 @@ body main {
     flex-direction: row;
     justify-content: flex-end;
     padding-right: 200px;
+    align-items: flex-end;
   }
   .footer div {
     margin: 10px;
@@ -90,7 +91,7 @@ body main {
   .footer__logo {
     position: relative;
     right: -700px;
-    top: 5px;
+    top: -3px;
   }
 }
 
@@ -157,7 +158,7 @@ body main {
 
 @media (min-width: 1024px) {
   .restaurants, .tutorial {
-    width: 1024px;
+    width: 994px;
     margin-inline: auto;
   }
 }
@@ -167,7 +168,7 @@ body main {
   padding-inline: 15px;
   padding-bottom: 20px;
   background-color: #F6F6F6;
-  box-shadow: #F6F6F6 -193px 0px, #F6F6F6 193px 0px;
+  box-shadow: #F6F6F6 -207.8px 0px, #F6F6F6 207.8px 0px;
 }
 
 .restaurants__container {
@@ -182,7 +183,7 @@ body main {
     flex-wrap: wrap;
   }
   .restaurants__container__card {
-    width: 45%;
+    width: 48%;
   }
 }
 .restaurants__container a {
@@ -222,6 +223,14 @@ body main {
 .card .card-content .card-like {
   margin-block: auto;
   margin-right: 20px;
+}
+.card .card-content .card-like input[type=checkbox]:checked + label .like {
+  display: block;
+  animation: check 0.5s normal;
+  top: 200px;
+}
+.card .card-content .card-like input[type=checkbox]:checked + label .heart {
+  opacity: 0%;
 }
 
 /*# sourceMappingURL=home.css.map */

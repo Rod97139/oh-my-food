@@ -77,7 +77,7 @@
 .restaurants, .tutorial {
 
     @media (min-width: 1024px) {
-        width: 1024px;
+        width: 994px;
         margin-inline: auto;
     }
     
@@ -88,7 +88,7 @@
     padding-inline: 15px ;
     padding-bottom: 20px;
     background-color: #F6F6F6;
-   box-shadow: #F6F6F6 -193px 0px, #F6F6F6 193px 0px;
+   box-shadow: #F6F6F6 -207.8px 0px, #F6F6F6 207.8px 0px;
 
 }
 
@@ -104,7 +104,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         &__card {
-            width: 45%;
+            width: 48%;
         }
     }
     a {
@@ -149,6 +149,36 @@
         .card-like {
             margin-block: auto;
             margin-right: 20px;
+            
+            input[type="checkbox"]:checked + label {
+                .like {
+                    display:block;
+                    animation: check 0.5s normal;
+                    top: 200px;
+                }
+    
+                .heart {
+                    opacity: 0%;
+                }
+            }
+
+            // @for $i from 1 through 3 {
+
+            //     input[type="checkbox"]:checked + label {
+            //         .like#{$i} {
+            //             display:block;
+            //             animation: check 0.5s normal;
+            //             top: 200px;
+            //         }
+    
+            //         .heart#{$i} {
+            //             opacity: 0%;
+            //         }
+            //     }
+
+               
+            // }
+
         }
     }
 }

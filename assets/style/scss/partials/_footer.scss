@@ -12,6 +12,7 @@
         flex-direction: row;
         justify-content: flex-end;
         padding-right: 200px;
+        align-items: flex-end;
 
         div {
             margin: 10px;
@@ -20,7 +21,7 @@
         &__logo {
             position: relative;
             right: -700px;
-            top: 5px;
+            top: -3px;
 
         }
 
