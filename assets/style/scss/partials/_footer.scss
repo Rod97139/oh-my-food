@@ -1,7 +1,30 @@
 .footer {
     background-color: #353535;
-    // &__logo {
-        
-    // }
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    height: 186px;
+
+    @media (min-width: 1024px) {
+        height: 114px;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 200px;
+
+        div {
+            margin: 10px;
+        }
+
+        &__logo {
+            position: relative;
+            right: -700px;
+            top: 5px;
+
+        }
+
+
+    }
 }
 

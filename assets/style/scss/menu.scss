@@ -149,13 +149,10 @@
                             right: 86px;
                         }
                     }
-                    
                 }
-              
 
 
                 input[type="checkbox"]:checked + label {
-                    
 
                     .name {
                         // trois petits points
@@ -171,16 +168,7 @@
                 }
 
                 .command {
-
-                    cursor: pointer;
-                    background: linear-gradient(#FF79DA, #9356DC);
-                    border-radius: 25px;
                     width: 186px;
-                    height: 50px;
-                    border: none;
-                    color: white;
-                    margin: 30px auto 0 auto;
-                    font-size: large;
                 }
             }
         }

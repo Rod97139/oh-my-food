@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .btn {
-  border-radius: 20px;
+  cursor: pointer;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  width: 218px;
+  height: 50px;
+  border: none;
+  color: white;
+  margin: 30px auto 0 auto;
+  font-size: medium;
 }
 
 .heart {
@@ -26,10 +34,6 @@
   filter: opacity(20%);
   cursor: pointer;
   animation: pulse 1000ms infinite;
-}
-
-.heart:enabled + .like {
-  display: block;
 }
 
 @keyframes pulse {
@@ -68,6 +72,28 @@ body main {
 
 .footer {
   background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  height: 186px;
+}
+@media (min-width: 1024px) {
+  .footer {
+    height: 114px;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 200px;
+  }
+  .footer div {
+    margin: 10px;
+  }
+  .footer__logo {
+    position: relative;
+    right: -700px;
+    top: 5px;
+  }
 }
 
 .menu__image {
@@ -186,15 +212,7 @@ body main {
   right: 86px;
 }
 .menu__content__form__ingredient .command {
-  cursor: pointer;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 25px;
   width: 186px;
-  height: 50px;
-  border: none;
-  color: white;
-  margin: 30px auto 0 auto;
-  font-size: large;
 }
 @media (min-width: 1024px) {
   .menu__content {
