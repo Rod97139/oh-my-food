@@ -2,18 +2,55 @@
   border-radius: 20px;
 }
 
+.heart {
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.like {
+  display: block;
+  display: none;
+  position: absolute;
+  top: 37.5px;
+  cursor: pointer;
+}
+
+.heart:active {
+  opacity: 0%;
+}
+
+.heart:active + .like {
+  display: block;
+  filter: opacity(20%);
+  cursor: pointer;
+  animation: pulse 1000ms infinite;
+}
+
+.heart:enabled + .like {
+  display: block;
+}
+
+@keyframes pulse {
+  0% {
+    filter: opacity(20%);
+  }
+  75% {
+    filter: opacity(50%);
+    transform: scale(1.2);
+  }
+}
+@keyframes check {
+  75% {
+    transform: scale(1.2);
+  }
+}
 body {
   margin: 0;
   max-width: 1440px;
   margin-inline: auto;
 }
 body main {
-  background-color: #F6F6F6;
-}
-@media (min-width: 1024px) {
-  body main {
-    background-color: white;
-  }
+  background-color: white;
 }
 
 .navbar {

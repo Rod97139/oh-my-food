@@ -4,18 +4,55 @@
   border-radius: 20px;
 }
 
+.heart {
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.like {
+  display: block;
+  display: none;
+  position: absolute;
+  top: 37.5px;
+  cursor: pointer;
+}
+
+.heart:active {
+  opacity: 0%;
+}
+
+.heart:active + .like {
+  display: block;
+  filter: opacity(20%);
+  cursor: pointer;
+  animation: pulse 1000ms infinite;
+}
+
+.heart:enabled + .like {
+  display: block;
+}
+
+@keyframes pulse {
+  0% {
+    filter: opacity(20%);
+  }
+  75% {
+    filter: opacity(50%);
+    transform: scale(1.2);
+  }
+}
+@keyframes check {
+  75% {
+    transform: scale(1.2);
+  }
+}
 body {
   margin: 0;
   max-width: 1440px;
   margin-inline: auto;
 }
 body main {
-  background-color: #F6F6F6;
-}
-@media (min-width: 1024px) {
-  body main {
-    background-color: white;
-  }
+  background-color: white;
 }
 
 .navbar {
@@ -35,9 +72,12 @@ body main {
 
 .menu__image {
   width: 100%;
+  max-height: 300px;
+  object-fit: cover;
 }
 .menu__content {
   transform: translateY(-50px);
+  box-shadow: 0px 50px 0px #F6F6F6;
   border-radius: 40px 40px 0 0;
   background-color: #F6F6F6;
   display: flex;
@@ -53,17 +93,38 @@ body main {
   justify-content: space-around;
   box-sizing: border-box;
 }
+.menu__content__title input[type=checkbox]:checked + label .like {
+  display: block;
+  animation: check 0.5s normal;
+}
+.menu__content__title input[type=checkbox]:checked + label .heart {
+  opacity: 0%;
+}
 .menu__content__title h1 {
+  flex-shrink: 0;
   margin-right: 1.6rem;
+  margin-bottom: 0;
 }
 .menu__content__logo {
-  margin-block: auto;
+  margin-top: auto;
 }
 .menu__content__form {
+  margin-left: 10px;
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   background-color: #F6F6F6;
   width: 100%;
+}
+.menu__content__form__type {
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.menu__content__form__type::after {
+  content: "";
+  display: block;
+  border-top: #99E2D0 3px solid;
+  width: 2.7rem;
+  margin-top: 0.4rem;
 }
 .menu__content__form__ingredient {
   display: flex;
@@ -71,7 +132,8 @@ body main {
   font-weight: lighter;
 }
 .menu__content__form__ingredient input[type=checkbox] + label {
-  margin: 10px;
+  cursor: pointer;
+  margin: 10px 20px 10px 10px;
   height: 90px;
   padding: 0 10px;
   background-color: white;
@@ -84,9 +146,10 @@ body main {
 .menu__content__form__ingredient input[type=checkbox] + label .name {
   white-space: nowrap;
   overflow: auto;
-  z-index: 2;
+  z-index: 1;
 }
 .menu__content__form__ingredient input[type=checkbox] + label .price-check {
+  z-index: 2;
   display: flex;
   position: absolute;
   transform: translateX(83%);
@@ -96,6 +159,8 @@ body main {
 .menu__content__form__ingredient input[type=checkbox] + label .price-check .price {
   margin-top: 50px;
   margin-right: 10px;
+  background-color: white;
+  box-shadow: white -12px 0px, white 12px 0px, white 0px -5px;
 }
 .menu__content__form__ingredient input[type=checkbox] + label .price-check .check {
   background-color: #99E2D0;
@@ -115,18 +180,20 @@ body main {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 62%;
 }
 .menu__content__form__ingredient input[type=checkbox]:checked + label .price-check {
   right: 86px;
 }
 .menu__content__form__ingredient .command {
+  cursor: pointer;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
   width: 186px;
   height: 50px;
   border: none;
   color: white;
-  margin: 50px auto 0 auto;
+  margin: 30px auto 0 auto;
   font-size: large;
 }
 @media (min-width: 1024px) {

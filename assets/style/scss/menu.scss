@@ -10,11 +10,15 @@
     
     &__image {
         width: 100%;
+        max-height: 300px;
+        object-fit: cover;
     }
     
     &__content {
+        
      
         transform: translateY(-50px);
+        box-shadow: 0px 50px 0px #F6F6F6;
         border-radius: 40px 40px 0 0;
         background-color: #F6F6F6;
         display: flex;
@@ -31,17 +35,47 @@
             justify-content: space-around;
             box-sizing: border-box;
 
+            input[type="checkbox"]:checked + label {
+                .like {
+                    display:block;
+                    animation: check 0.5s normal;
+                }
+
+                .heart {
+                    opacity: 0%;
+                }
+            }
+            
+
             h1 {
+                flex-shrink: 0;
                 margin-right: 1.6rem;
+                margin-bottom: 0;
             }
         }
 
         &__logo {
-            margin-block: auto;
+            margin-top: auto;
         }
 
 
         &__form {
+
+            &__type {
+                margin-top: 40px;
+                margin-left: 10px;
+            }
+
+            &__type::after {
+                content: "";
+                display: block;
+                border-top: #99E2D0 3px solid;
+                // width: 12%;
+                width: 2.7rem;
+                margin-top: 0.4rem;
+            }
+            
+            margin-left: 10px;
             font-family: 'Roboto', sans-serif;
             font-size: 0.8rem;
             background-color: #F6F6F6;
@@ -57,7 +91,8 @@
                     // width: 349px;
                     // width: 100%;
                     // max-width: 100%;
-                    margin: 10px;
+                    cursor: pointer;
+                    margin: 10px 20px 10px 10px;
                     height: 90px;
                     padding: 0 10px;
                     background-color: white;
@@ -72,11 +107,12 @@
                         // text-overflow: ellipsis;
                         white-space: nowrap;
                         overflow: auto;
-                        z-index: 2;
+                        z-index: 1;
                         // flex-shrink: 0;
                     }
 
                     .price-check {
+                        z-index: 2;
                         display: flex;
                         position: absolute;
                         transform: translateX(83%);
@@ -86,6 +122,8 @@
                         .price {
                             margin-top: 50px;
                             margin-right: 10px;
+                            background-color: white;
+                            box-shadow: white -12px 0px, white 12px 0px, white 0px -5px;
                         }
     
                         .check {
@@ -124,7 +162,7 @@
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         overflow: hidden;
-                        // width:50%;
+                        width:62%;
                     }
 
                     .price-check {
@@ -133,13 +171,15 @@
                 }
 
                 .command {
+
+                    cursor: pointer;
                     background: linear-gradient(#FF79DA, #9356DC);
                     border-radius: 25px;
                     width: 186px;
                     height: 50px;
                     border: none;
                     color: white;
-                    margin: 50px auto 0 auto;
+                    margin: 30px auto 0 auto;
                     font-size: large;
                 }
             }

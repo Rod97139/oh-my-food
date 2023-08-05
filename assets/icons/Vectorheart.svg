@@ -1,0 +1,20 @@
+<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="22" height="21" fill="#D2D2D2" style="fill:#D2D2D2;fill:color(display-p3 0.8250 0.8250 0.8250);fill-opacity:1;"/>
+<g clip-path="url(#clip0_0_1)">
+<rect width="375" height="1590" transform="translate(-312 -323)" fill="white" style="fill:white;fill:white;fill-opacity:1;"/>
+<rect x="-312" y="-260" width="375" height="275" fill="url(#pattern0)" style=""/>
+<path d="M-312 -1.90735e-05C-312 -22.0914 -294.091 -40 -272 -40H23C45.0914 -40 63 -22.0914 63 0V1267H-312V-1.90735e-05Z" fill="#F7F7F7" style="fill:#F7F7F7;fill:color(display-p3 0.9667 0.9667 0.9667);fill-opacity:1;"/>
+<mask id="path-3-inside-1_0_1" fill="white">
+<path d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z"/>
+</mask>
+<path d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z" stroke="#101010" style="stroke:#101010;stroke:color(display-p3 0.0625 0.0625 0.0625);stroke-opacity:1;" stroke-width="2" mask="url(#path-3-inside-1_0_1)"/>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_0_1" transform="matrix(0.000261252 0 0 0.000356252 -0.0350433 0)"/>
+</pattern>
+<clipPath id="clip0_0_1">
+<rect width="375" height="1590" fill="white" style="fill:white;fill:white;fill-opacity:1;" transform="translate(-312 -323)"/>
+</clipPath>
+</defs>
+</svg>

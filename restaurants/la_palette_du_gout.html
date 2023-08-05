@@ -34,65 +34,185 @@
                 <img class="menu__image" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
                 <div class="menu__content">
                     <div class="menu__content__title">
-                        <h1>La palette du goût  </h1>
-                        <div class="menu__content__logo" >
-                            <img src="../assets/icons/Status=Default.png" alt="">
-                        </div>
+                        <h1>La palette du goût</h1>
+                        <input type="checkbox" name="like" id="like" hidden>
+                        <label for="like" class="menu__content__logo" >
+                            <svg class="heart" width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="22" height="21" fill="#D2D2D2" style="fill:#D2D2D2;fill:color(display-p3 0.8250 0.8250 0.8250);fill-opacity:1;"/>
+                                <g clip-path="url(#clip0_0_1)">
+                                <rect width="375" height="1590" transform="translate(-312 -323)" fill="white" style="fill:white;fill:white;fill-opacity:1;"/>
+                                <rect x="-312" y="-260" width="375" height="275" fill="url(#pattern0)"/>
+                                <path d="M-312 -1.90735e-05C-312 -22.0914 -294.091 -40 -272 -40H23C45.0914 -40 63 -22.0914 63 0V1267H-312V-1.90735e-05Z" fill="#F7F7F7" style="fill:#F7F7F7;fill:color(display-p3 0.9667 0.9667 0.9667);fill-opacity:1;"/>
+                                <mask id="path-3-inside-1_0_1" fill="white">
+                                <path d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z"/>
+                                </mask>
+                                <path d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z" stroke="#101010" style="stroke:#101010;stroke:color(display-p3 0.0625 0.0625 0.0625);stroke-opacity:1;" stroke-width="2" mask="url(#path-3-inside-1_0_1)"/>
+                                </g>
+                                <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_0_1" transform="matrix(0.000261252 0 0 0.000356252 -0.0350433 0)"/>
+                                </pattern>
+                                <clipPath id="clip0_0_1">
+                                <rect width="375" height="1590" fill="white" style="fill:white;fill:white;fill-opacity:1;" transform="translate(-312 -323)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                <svg class="like" width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z" fill="url(#paint0_linear_87783_528)"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_87783_528" x1="11.0002" y1="-5.4601" x2="3.43443" y2="27.9923" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#9356DC"/>
+                                    <stop offset="1" stop-color="#FF79DA"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                        </label>
                     </div>
                     <form class="menu__content__form" action="">
-                        <h2>ENTRÉES</h2>
+                        <h2 class="menu__content__form__type">ENTRÉES</h2>
                         <div class="menu__content__form__ingredient">
                             <input name="entree1" id="entree1" type="checkbox" hidden>
                             <label for="entree1">
-                                <h3 >Fricassée d'escargots</h3>
-                                <p><span>Au piment d'Espelette </span><span>25€</span></p>
-                            </label>
+                                <div class="name">
+                                    <h3 >Fricassée d'escargots</h3>
+                                    <span>Au piment d'Espelette</span>
+                                </div>
+                                <div class="price-check">
+                                    <span class="price">25€</span>
+                                    <div class="check">
+                                        <svg  width="28" height="28" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0847 10.9656C20.0847 16.4884 15.6076 20.9656 10.0847 20.9656C4.56185 20.9656 0.0847168 16.4884 0.0847168 10.9656C0.0847168 5.44271 4.56185 0.965576 10.0847 0.965576C15.6076 0.965576 20.0847 5.44271 20.0847 10.9656ZM8.92802 16.2605L16.3474 8.84114C16.5993 8.5892 16.5993 8.1807 16.3474 7.92876L15.435 7.01638C15.1831 6.76441 14.7746 6.76441 14.5226 7.01638L8.47181 13.0671L5.64685 10.2421C5.39492 9.99021 4.98641 9.99021 4.73443 10.2421L3.82206 11.1545C3.57012 11.4065 3.57012 11.815 3.82206 12.0669L8.0156 16.2605C8.26758 16.5124 8.67605 16.5124 8.92802 16.2605Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                </label>
                             <input name="entree2" id="entree2" type="checkbox" hidden>
                             <label for="entree2">
-                                <h3 >Foie gras de canard mi-cuit</h3>
-                                <p><span>Et ses copeaux de truffe noire </span><span>35€</span></p>
+                                <div class="name">
+                                    <h3 >Foie gras de canard mi-cuit</h3>
+                                    <span>Et ses copeaux de truffe noire</span>
+                                </div>
+                                <div class="price-check">
+                                    <span class="price">35€</span>
+                                    <div class="check">
+                                        <svg  width="28" height="28" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0847 10.9656C20.0847 16.4884 15.6076 20.9656 10.0847 20.9656C4.56185 20.9656 0.0847168 16.4884 0.0847168 10.9656C0.0847168 5.44271 4.56185 0.965576 10.0847 0.965576C15.6076 0.965576 20.0847 5.44271 20.0847 10.9656ZM8.92802 16.2605L16.3474 8.84114C16.5993 8.5892 16.5993 8.1807 16.3474 7.92876L15.435 7.01638C15.1831 6.76441 14.7746 6.76441 14.5226 7.01638L8.47181 13.0671L5.64685 10.2421C5.39492 9.99021 4.98641 9.99021 4.73443 10.2421L3.82206 11.1545C3.57012 11.4065 3.57012 11.815 3.82206 12.0669L8.0156 16.2605C8.26758 16.5124 8.67605 16.5124 8.92802 16.2605Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </label>
                             <input name="entree3" id="entree3" type="checkbox" hidden>
                             <label for="entree3">
-                                <h3 >Œuf au plat</h3>
-                                <p><span>Assaisonné à la truffe sur lit de caviar</span><span>20€</span></p>
+                                <div class="name">
+                                    <h3 >Œuf au plat</h3>
+                                    <span>Assaisonné à la truffe sur lit de caviar</span>
+                                </div>
+                                <div class="price-check">
+                                    <span class="price">20€</span>
+                                    <div class="check">
+                                        <svg  width="28" height="28" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0847 10.9656C20.0847 16.4884 15.6076 20.9656 10.0847 20.9656C4.56185 20.9656 0.0847168 16.4884 0.0847168 10.9656C0.0847168 5.44271 4.56185 0.965576 10.0847 0.965576C15.6076 0.965576 20.0847 5.44271 20.0847 10.9656ZM8.92802 16.2605L16.3474 8.84114C16.5993 8.5892 16.5993 8.1807 16.3474 7.92876L15.435 7.01638C15.1831 6.76441 14.7746 6.76441 14.5226 7.01638L8.47181 13.0671L5.64685 10.2421C5.39492 9.99021 4.98641 9.99021 4.73443 10.2421L3.82206 11.1545C3.57012 11.4065 3.57012 11.815 3.82206 12.0669L8.0156 16.2605C8.26758 16.5124 8.67605 16.5124 8.92802 16.2605Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </label>
                         </div>
-                        <h2>PLATS</h2>
+                        <h2 class="menu__content__form__type">PLATS</h2>
                         <div class="menu__content__form__ingredient">
                             <input name="plat1" id="plat1" type="checkbox" hidden>
                             <label for="plat1">
-                                <h3 >Filet de bœuf aux herbes</h3>
-                                <p><span>Accompagné de sa ribambelle de légumes </span><span>40€</span></p>
+                                <div class="name">
+                                    <h3 >Filet de bœuf aux herbes</h3>
+                                    <span>Accompagné de sa ribambelle de légumes</span>
+                                </div>
+                                <div class="price-check">
+                                    <span class="price">40€</span>
+                                    <div class="check">
+                                        <svg  width="28" height="28" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0847 10.9656C20.0847 16.4884 15.6076 20.9656 10.0847 20.9656C4.56185 20.9656 0.0847168 16.4884 0.0847168 10.9656C0.0847168 5.44271 4.56185 0.965576 10.0847 0.965576C15.6076 0.965576 20.0847 5.44271 20.0847 10.9656ZM8.92802 16.2605L16.3474 8.84114C16.5993 8.5892 16.5993 8.1807 16.3474 7.92876L15.435 7.01638C15.1831 6.76441 14.7746 6.76441 14.5226 7.01638L8.47181 13.0671L5.64685 10.2421C5.39492 9.99021 4.98641 9.99021 4.73443 10.2421L3.82206 11.1545C3.57012 11.4065 3.57012 11.815 3.82206 12.0669L8.0156 16.2605C8.26758 16.5124 8.67605 16.5124 8.92802 16.2605Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </label>
                             <input name="plat2" id="plat2" type="checkbox" hidden>
                             <label for="plat2">
-                                <h3 >Parmentier de queue de bœuf</h3>
-                                <p><span>À la truffe noire sur sa purée de panais</span><span>35€</span></p>
+                                <div class="name">
+                                    <h3 >Parmentier de queue de bœuf</h3>
+                                    <span>À la truffe noire sur sa purée de panais</span>
+                                </div>
+                                <div class="price-check">
+                                    <span class="price">35€</span>
+                                    <div class="check">
+                                        <svg  width="28" height="28" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0847 10.9656C20.0847 16.4884 15.6076 20.9656 10.0847 20.9656C4.56185 20.9656 0.0847168 16.4884 0.0847168 10.9656C0.0847168 5.44271 4.56185 0.965576 10.0847 0.965576C15.6076 0.965576 20.0847 5.44271 20.0847 10.9656ZM8.92802 16.2605L16.3474 8.84114C16.5993 8.5892 16.5993 8.1807 16.3474 7.92876L15.435 7.01638C15.1831 6.76441 14.7746 6.76441 14.5226 7.01638L8.47181 13.0671L5.64685 10.2421C5.39492 9.99021 4.98641 9.99021 4.73443 10.2421L3.82206 11.1545C3.57012 11.4065 3.57012 11.815 3.82206 12.0669L8.0156 16.2605C8.26758 16.5124 8.67605 16.5124 8.92802 16.2605Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </label>
                             <input name="plat3" id="plat3" type="checkbox" hidden>
                             <label for="plat3">
-                                <h3 >Filet de turbot</h3>
-                                <p><span>Aux agrumes</span><span>44€</span></p>
+                                <div class="name">
+                                    <h3 >Filet de turbot</h3>
+                                    <span>Aux agrumes</span>
+                                </div>
+                                <div class="price-check">
+                                    <span class="price">44€</span>
+                                    <div class="check">
+                                        <svg  width="28" height="28" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0847 10.9656C20.0847 16.4884 15.6076 20.9656 10.0847 20.9656C4.56185 20.9656 0.0847168 16.4884 0.0847168 10.9656C0.0847168 5.44271 4.56185 0.965576 10.0847 0.965576C15.6076 0.965576 20.0847 5.44271 20.0847 10.9656ZM8.92802 16.2605L16.3474 8.84114C16.5993 8.5892 16.5993 8.1807 16.3474 7.92876L15.435 7.01638C15.1831 6.76441 14.7746 6.76441 14.5226 7.01638L8.47181 13.0671L5.64685 10.2421C5.39492 9.99021 4.98641 9.99021 4.73443 10.2421L3.82206 11.1545C3.57012 11.4065 3.57012 11.815 3.82206 12.0669L8.0156 16.2605C8.26758 16.5124 8.67605 16.5124 8.92802 16.2605Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </label>
                         </div>
-                        <h2>DESSERTS</h2>
+                        <h2 class="menu__content__form__type">DESSERTS</h2>
                         <div class="menu__content__form__ingredient">
                             <input name="dessert1" id="dessert1" type="checkbox" hidden>
                             <label for="dessert1">
-                                <h3 >Paris-Brest</h3>
-                                <p><span>Revisité</span><span>18€</span></p>
+                                <div class="name">
+                                    <h3 >Paris-Brest</h3>
+                                    <span>Revisité</span>
+                                </div>
+                                <div class="price-check">
+                                    <span class="price">18€</span>
+                                    <div class="check">
+                                        <svg  width="28" height="28" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0847 10.9656C20.0847 16.4884 15.6076 20.9656 10.0847 20.9656C4.56185 20.9656 0.0847168 16.4884 0.0847168 10.9656C0.0847168 5.44271 4.56185 0.965576 10.0847 0.965576C15.6076 0.965576 20.0847 5.44271 20.0847 10.9656ZM8.92802 16.2605L16.3474 8.84114C16.5993 8.5892 16.5993 8.1807 16.3474 7.92876L15.435 7.01638C15.1831 6.76441 14.7746 6.76441 14.5226 7.01638L8.47181 13.0671L5.64685 10.2421C5.39492 9.99021 4.98641 9.99021 4.73443 10.2421L3.82206 11.1545C3.57012 11.4065 3.57012 11.815 3.82206 12.0669L8.0156 16.2605C8.26758 16.5124 8.67605 16.5124 8.92802 16.2605Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </label>
                             <input name="dessert2" id="dessert2" type="checkbox" hidden>
                             <label for="dessert2">
-                                <h3 >Macaron au chocolat d'exception</h3>
-                                <p><span>Et glace à la vanille de Madagascar</span><span>22€</span></p>
+                                <div class="name">
+                                    <h3 >Macaron au chocolat d'exception</h3>
+                                    <span>Et glace à la vanille de Madagascar</span>
+                                </div>
+                                <div class="price-check">
+                                    <span class="price">22€</span>
+                                    <div class="check">
+                                        <svg  width="28" height="28" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0847 10.9656C20.0847 16.4884 15.6076 20.9656 10.0847 20.9656C4.56185 20.9656 0.0847168 16.4884 0.0847168 10.9656C0.0847168 5.44271 4.56185 0.965576 10.0847 0.965576C15.6076 0.965576 20.0847 5.44271 20.0847 10.9656ZM8.92802 16.2605L16.3474 8.84114C16.5993 8.5892 16.5993 8.1807 16.3474 7.92876L15.435 7.01638C15.1831 6.76441 14.7746 6.76441 14.5226 7.01638L8.47181 13.0671L5.64685 10.2421C5.39492 9.99021 4.98641 9.99021 4.73443 10.2421L3.82206 11.1545C3.57012 11.4065 3.57012 11.815 3.82206 12.0669L8.0156 16.2605C8.26758 16.5124 8.67605 16.5124 8.92802 16.2605Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </label>
                             <input name="dessert3" id="dessert3" type="checkbox" hidden>
                             <label for="dessert3">
-                                <h3 >Mousse au chocolat</h3>
-                                <p><span>Au piment d'Espelette et à la truffe noire </span><span>23€</span></p>
+                                <div class="name">
+                                    <h3 >Mousse au chocolat</h3>
+                                    <span>Au piment d'Espelette et à la truffe noire</span>
+                                </div>
+                                <div class="price-check">
+                                    <span class="price">23€</span>
+                                    <div class="check">
+                                        <svg  width="28" height="28" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0847 10.9656C20.0847 16.4884 15.6076 20.9656 10.0847 20.9656C4.56185 20.9656 0.0847168 16.4884 0.0847168 10.9656C0.0847168 5.44271 4.56185 0.965576 10.0847 0.965576C15.6076 0.965576 20.0847 5.44271 20.0847 10.9656ZM8.92802 16.2605L16.3474 8.84114C16.5993 8.5892 16.5993 8.1807 16.3474 7.92876L15.435 7.01638C15.1831 6.76441 14.7746 6.76441 14.5226 7.01638L8.47181 13.0671L5.64685 10.2421C5.39492 9.99021 4.98641 9.99021 4.73443 10.2421L3.82206 11.1545C3.57012 11.4065 3.57012 11.815 3.82206 12.0669L8.0156 16.2605C8.26758 16.5124 8.67605 16.5124 8.92802 16.2605Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </label>
+                            <button class="command" type="submit">Commander</button>
                         </div>
 
                     </form>
