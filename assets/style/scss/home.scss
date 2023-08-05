@@ -2,13 +2,34 @@
 @import "partials/settings";
 @import "partials/nav";
 @import "partials/footer";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
 
 .location {
     background-color: #EAEAEA;
     text-align: center;
+    padding-block: 20px;
+    font-weight: bold;
 }
 
 .reservation {
+
+    &__title {
+
+        margin: 30px;
+        @media (min-width:1024px) {
+            font-size: 2.5rem;
+            font-weight: bolder;
+        }
+    }
+
+    &__content {
+        margin: 25px;
+    }
     
     display: flex;
     flex-direction: column;
@@ -150,34 +171,35 @@
             margin-block: auto;
             margin-right: 20px;
             
-            input[type="checkbox"]:checked + label {
-                .like {
+            input[type="checkbox"]:checked ~ label {
+
+                .liked {
                     display:block;
                     animation: check 0.5s normal;
                     top: 200px;
                 }
     
-                .heart {
+                .unliked {
                     opacity: 0%;
                 }
             }
 
-            // @for $i from 1 through 3 {
+            // @for $i from 1 through 4 {
 
-            //     input[type="checkbox"]:checked + label {
-            //         .like#{$i} {
+            //     #like#{$i}:checked + #label#{$i} {
+
+            //         .liked {
             //             display:block;
             //             animation: check 0.5s normal;
             //             top: 200px;
             //         }
     
-            //         .heart#{$i} {
+            //         .unliked {
             //             opacity: 0%;
             //         }
-            //     }
-
-               
+            //     } 
             // }
+
 
         }
     }

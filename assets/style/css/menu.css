@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .btn {
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
@@ -10,6 +11,12 @@
   color: white;
   margin: 30px auto 0 auto;
   font-size: medium;
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: 2px 8px 15px #c2c2c2;
+}
+
+.btn:hover {
+  opacity: 75%;
 }
 
 .heart {
@@ -23,17 +30,6 @@
   position: absolute;
   top: 37.5px;
   cursor: pointer;
-}
-
-.heart:active {
-  opacity: 0%;
-}
-
-.heart:active + .like {
-  display: block;
-  filter: opacity(20%);
-  cursor: pointer;
-  animation: pulse 1000ms infinite;
 }
 
 @keyframes pulse {
@@ -65,9 +61,16 @@ body main {
 }
 .navbar__home {
   margin-inline: auto;
+  transform: scale(0.7);
+}
+@media (min-width: 1024px) {
+  .navbar__home {
+    transform: scale(0.8);
+  }
 }
 .navbar__previous {
   position: absolute;
+  margin-left: 1rem;
 }
 
 .footer {
@@ -169,6 +172,7 @@ body main {
   justify-content: space-between;
   overflow: hidden;
   position: relative;
+  box-shadow: 2px 8px 15px #dfdfdf;
 }
 .menu__content__form__ingredient input[type=checkbox] + label .name {
   white-space: nowrap;
