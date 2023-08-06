@@ -4,10 +4,6 @@
 @import "partials/footer";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body {
-    font-family: 'Roboto', sans-serif;
-
-}
 
 .location {
     background-color: #EAEAEA;
@@ -119,7 +115,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    @media (min-width: 1024px) {
+    @media (min-width: 665px) {
         width: 100%;
         flex-direction: row;
         justify-content: space-between;

@@ -46,6 +46,7 @@
   }
 }
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   max-width: 1440px;
   margin-inline: auto;
@@ -95,12 +96,8 @@ body main {
   .footer__logo {
     position: relative;
     right: -750px;
-    top: -6px;
+    top: -2px;
   }
-}
-
-body {
-  font-family: "Roboto", sans-serif;
 }
 
 .location {
@@ -197,7 +194,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 1024px) {
+@media (min-width: 665px) {
   .restaurants__container {
     width: 100%;
     flex-direction: row;
