@@ -10,12 +10,13 @@
   color: white;
   margin: 30px auto 0 auto;
   font-size: medium;
-  transition: opacity 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   box-shadow: 2px 8px 15px #c2c2c2;
 }
 
 .btn:hover {
-  opacity: 75%;
+  opacity: 85%;
+  box-shadow: 2px 8px 25px #838383;
 }
 
 .heart {
