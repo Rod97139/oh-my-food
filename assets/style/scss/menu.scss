@@ -165,13 +165,29 @@
 
                     .price-check {
                         right: 86px;
-
+                        
                         .check {
-                            
-                            animation: check 0.2s normal;
+                            svg {
+                                @media (hover: hover) {
+                                animation: check 0.1s ease-in-out;
+                                }
+                            }
                         }
                     }
                 }
+
+                // input[type="checkbox"]:not(:checked) + label {
+
+                //     .price-check {
+
+                //         .check {
+                //             @media (hover: hover) {
+                //             animation: check 0.1s normal;
+                //             }
+                //             animation: check 0.5s normal;
+                //         }
+                //     }
+                // }
 
                 .command {
                     width: 186px;

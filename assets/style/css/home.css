@@ -94,8 +94,8 @@ body main {
   }
   .footer__logo {
     position: relative;
-    right: -700px;
-    top: -3px;
+    right: -750px;
+    top: -6px;
   }
 }
 
@@ -246,12 +246,12 @@ body {
   margin-block: auto;
   margin-right: 20px;
 }
-.card .card-content .card-like input[type=checkbox]:checked ~ label .liked {
+.card .card-content .card-like input[type=checkbox]:checked + label .liked {
   display: block;
   animation: check 0.5s normal;
   top: 200px;
 }
-.card .card-content .card-like input[type=checkbox]:checked ~ label .unliked {
+.card .card-content .card-like input[type=checkbox]:checked + label .unliked {
   opacity: 0%;
 }
 

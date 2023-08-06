@@ -95,8 +95,8 @@ body main {
   }
   .footer__logo {
     position: relative;
-    right: -700px;
-    top: -3px;
+    right: -750px;
+    top: -6px;
   }
 }
 
@@ -216,8 +216,10 @@ body main {
 .menu__content__form__ingredient input[type=checkbox]:checked + label .price-check {
   right: 86px;
 }
-.menu__content__form__ingredient input[type=checkbox]:checked + label .price-check .check {
-  animation: check 0.2s normal;
+@media (hover: hover) {
+  .menu__content__form__ingredient input[type=checkbox]:checked + label .price-check .check svg {
+    animation: check 0.1s ease-in-out;
+  }
 }
 .menu__content__form__ingredient .command {
   width: 186px;
