@@ -239,6 +239,21 @@ body main {
 .card .card-content .card-txt p {
   margin-top: 5px;
 }
+.card .card-content .card-new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #99E2D0;
+  text-align: center;
+  width: 80px;
+  height: 29px;
+  line-height: 29px;
+  color: #008766;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 18px;
+  border-radius: 3px;
+}
 .card .card-content .card-like {
   margin-block: auto;
   margin-right: 20px;
