@@ -6,6 +6,13 @@
     justify-content: space-around;
     padding: 20px;
     height: 186px;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    svg {
+        margin-right: 5px;
+    }
 
     @media (min-width: 1024px) {
         height: 114px;
@@ -13,7 +20,6 @@
         justify-content: flex-end;
         padding-right: 200px;
         align-items: flex-end;
-
         div {
             margin: 10px;
         }

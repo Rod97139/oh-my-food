@@ -68,14 +68,18 @@
             margin: auto;
             padding: 10px 0 10px 0;
             margin-block: 20px;
-            box-shadow: 2px 8px 15px #dfdfdf; 
-            
-            
+            box-shadow: 2px 8px 15px #dfdfdf;
+
             &__logo {
                 position: absolute;
                 transform: translateX(-40px);
-                
-                
+            }
+            #phone{
+                transform: translateX(-32px);
+            }
+            #phone-txt {
+                position: relative;
+                left: 7.5px;
             }
             &__number {
                 position: absolute;
