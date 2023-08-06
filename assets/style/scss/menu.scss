@@ -91,11 +91,11 @@
                 flex-direction: column;
                 font-weight: lighter;
 
-                @for $i from 1 through 9 {
+                @for $i from 1 through 10 {
                     #choice#{$i} {
-                        animation: fadein #{$i*0.35}s;
-                        -moz-animation: fadein #{$i*0.35}s; /* Firefox */
-                        -webkit-animation: fadein #{$i*0.35}s; /* Safari et Chrome */
+                        animation: fadein #{$i*0.50}s;
+                        -moz-animation: fadein #{$i*0.50}s; /* Firefox */
+                        -webkit-animation: fadein #{$i*0.50}s; /* Safari et Chrome */
                     } 
                 }
 
@@ -103,7 +103,7 @@
                     from {
                         opacity:0;
                     }
-                    50% {
+                    30% {
                         opacity:0;
                       }
                     to {

@@ -166,55 +166,60 @@ body main {
   font-weight: lighter;
 }
 .menu__content__form__ingredient #choice1 {
-  animation: fadein 0.35s;
-  -moz-animation: fadein 0.35s; /* Firefox */
-  -webkit-animation: fadein 0.35s; /* Safari et Chrome */
+  animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s; /* Firefox */
+  -webkit-animation: fadein 0.5s; /* Safari et Chrome */
 }
 .menu__content__form__ingredient #choice2 {
-  animation: fadein 0.7s;
-  -moz-animation: fadein 0.7s; /* Firefox */
-  -webkit-animation: fadein 0.7s; /* Safari et Chrome */
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari et Chrome */
 }
 .menu__content__form__ingredient #choice3 {
-  animation: fadein 1.05s;
-  -moz-animation: fadein 1.05s; /* Firefox */
-  -webkit-animation: fadein 1.05s; /* Safari et Chrome */
+  animation: fadein 1.5s;
+  -moz-animation: fadein 1.5s; /* Firefox */
+  -webkit-animation: fadein 1.5s; /* Safari et Chrome */
 }
 .menu__content__form__ingredient #choice4 {
-  animation: fadein 1.4s;
-  -moz-animation: fadein 1.4s; /* Firefox */
-  -webkit-animation: fadein 1.4s; /* Safari et Chrome */
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari et Chrome */
 }
 .menu__content__form__ingredient #choice5 {
-  animation: fadein 1.75s;
-  -moz-animation: fadein 1.75s; /* Firefox */
-  -webkit-animation: fadein 1.75s; /* Safari et Chrome */
+  animation: fadein 2.5s;
+  -moz-animation: fadein 2.5s; /* Firefox */
+  -webkit-animation: fadein 2.5s; /* Safari et Chrome */
 }
 .menu__content__form__ingredient #choice6 {
-  animation: fadein 2.1s;
-  -moz-animation: fadein 2.1s; /* Firefox */
-  -webkit-animation: fadein 2.1s; /* Safari et Chrome */
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari et Chrome */
 }
 .menu__content__form__ingredient #choice7 {
-  animation: fadein 2.45s;
-  -moz-animation: fadein 2.45s; /* Firefox */
-  -webkit-animation: fadein 2.45s; /* Safari et Chrome */
+  animation: fadein 3.5s;
+  -moz-animation: fadein 3.5s; /* Firefox */
+  -webkit-animation: fadein 3.5s; /* Safari et Chrome */
 }
 .menu__content__form__ingredient #choice8 {
-  animation: fadein 2.8s;
-  -moz-animation: fadein 2.8s; /* Firefox */
-  -webkit-animation: fadein 2.8s; /* Safari et Chrome */
+  animation: fadein 4s;
+  -moz-animation: fadein 4s; /* Firefox */
+  -webkit-animation: fadein 4s; /* Safari et Chrome */
 }
 .menu__content__form__ingredient #choice9 {
-  animation: fadein 3.15s;
-  -moz-animation: fadein 3.15s; /* Firefox */
-  -webkit-animation: fadein 3.15s; /* Safari et Chrome */
+  animation: fadein 4.5s;
+  -moz-animation: fadein 4.5s; /* Firefox */
+  -webkit-animation: fadein 4.5s; /* Safari et Chrome */
+}
+.menu__content__form__ingredient #choice10 {
+  animation: fadein 5s;
+  -moz-animation: fadein 5s; /* Firefox */
+  -webkit-animation: fadein 5s; /* Safari et Chrome */
 }
 @keyframes fadein {
   from {
     opacity: 0;
   }
-  50% {
+  30% {
     opacity: 0;
   }
   to {
