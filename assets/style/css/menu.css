@@ -123,6 +123,10 @@ body main {
   justify-content: space-around;
   box-sizing: border-box;
 }
+.menu__content__title a {
+  text-decoration: none;
+  color: black;
+}
 .menu__content__title input[type=checkbox]:checked + label .like {
   display: block;
   animation: check 0.5s normal;
@@ -160,6 +164,78 @@ body main {
   display: flex;
   flex-direction: column;
   font-weight: lighter;
+}
+.menu__content__form__ingredient #choice1 {
+  animation: fadein 0.35s;
+  -moz-animation: fadein 0.35s; /* Firefox */
+  -webkit-animation: fadein 0.35s; /* Safari et Chrome */
+}
+.menu__content__form__ingredient #choice2 {
+  animation: fadein 0.7s;
+  -moz-animation: fadein 0.7s; /* Firefox */
+  -webkit-animation: fadein 0.7s; /* Safari et Chrome */
+}
+.menu__content__form__ingredient #choice3 {
+  animation: fadein 1.05s;
+  -moz-animation: fadein 1.05s; /* Firefox */
+  -webkit-animation: fadein 1.05s; /* Safari et Chrome */
+}
+.menu__content__form__ingredient #choice4 {
+  animation: fadein 1.4s;
+  -moz-animation: fadein 1.4s; /* Firefox */
+  -webkit-animation: fadein 1.4s; /* Safari et Chrome */
+}
+.menu__content__form__ingredient #choice5 {
+  animation: fadein 1.75s;
+  -moz-animation: fadein 1.75s; /* Firefox */
+  -webkit-animation: fadein 1.75s; /* Safari et Chrome */
+}
+.menu__content__form__ingredient #choice6 {
+  animation: fadein 2.1s;
+  -moz-animation: fadein 2.1s; /* Firefox */
+  -webkit-animation: fadein 2.1s; /* Safari et Chrome */
+}
+.menu__content__form__ingredient #choice7 {
+  animation: fadein 2.45s;
+  -moz-animation: fadein 2.45s; /* Firefox */
+  -webkit-animation: fadein 2.45s; /* Safari et Chrome */
+}
+.menu__content__form__ingredient #choice8 {
+  animation: fadein 2.8s;
+  -moz-animation: fadein 2.8s; /* Firefox */
+  -webkit-animation: fadein 2.8s; /* Safari et Chrome */
+}
+.menu__content__form__ingredient #choice9 {
+  animation: fadein 3.15s;
+  -moz-animation: fadein 3.15s; /* Firefox */
+  -webkit-animation: fadein 3.15s; /* Safari et Chrome */
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .menu__content__form__ingredient input[type=checkbox] + label {
   cursor: pointer;
