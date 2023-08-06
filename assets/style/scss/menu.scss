@@ -165,6 +165,11 @@
 
                     .price-check {
                         right: 86px;
+
+                        .check {
+                            
+                            animation: check 0.2s normal;
+                        }
                     }
                 }
 

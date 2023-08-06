@@ -216,6 +216,9 @@ body main {
 .menu__content__form__ingredient input[type=checkbox]:checked + label .price-check {
   right: 86px;
 }
+.menu__content__form__ingredient input[type=checkbox]:checked + label .price-check .check {
+  animation: check 0.2s normal;
+}
 .menu__content__form__ingredient .command {
   width: 186px;
 }
