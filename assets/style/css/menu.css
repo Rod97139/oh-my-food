@@ -27,7 +27,6 @@
 
 .like {
   display: block;
-  display: none;
   position: absolute;
   top: 37.5px;
   cursor: pointer;
@@ -127,7 +126,7 @@ body main {
 }
 .menu__content__title {
   font-family: "Shrikhand", cursive;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
@@ -139,9 +138,13 @@ body main {
 .menu__content__title input[type=checkbox]:checked + label .like {
   display: block;
   animation: check 0.5s normal;
+  top: 30px;
 }
 .menu__content__title input[type=checkbox]:checked + label .heart {
   opacity: 0%;
+}
+.menu__content__title input[type=checkbox]:not(:checked) + label .like {
+  opacity: 0;
 }
 .menu__content__title h1 {
   flex-shrink: 0;

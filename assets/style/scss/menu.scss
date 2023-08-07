@@ -30,7 +30,7 @@
         
         &__title {
             font-family: 'Shrikhand', cursive;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             display: flex;
             justify-content: space-around;
             box-sizing: border-box;
@@ -43,12 +43,21 @@
                 .like {
                     display:block;
                     animation: check 0.5s normal;
-                }
+                    top: 30px;
 
+                }
                 .heart {
                     opacity: 0%;
                 }
             }
+
+            input[type="checkbox"]:not(:checked) + label {
+                .like {
+                    opacity: 0;
+                }
+            }
+
+
             
 
             h1 {
