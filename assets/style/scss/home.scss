@@ -75,22 +75,24 @@
 
     }
     
-    &__cube:hover {
-        div {
-            width: 240px;
-            height: 240px;
-            line-height: 240px;
+    @media (hover:hover) {
+        &__cube:hover {
+            div {
+                width: 240px;
+                height: 240px;
+                line-height: 240px;
+            }
+
+            .face1 { -webkit-transform: translateZ(120px);                                }
+            .face2 { -webkit-transform: rotateY(90deg) translateZ(120px);                 }
+            .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(120px);  }
+            .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(120px); }
+            .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(120px); }
+            .face6 { -webkit-transform: rotateX(-90deg) translateZ(120px);                }
+
+            -webkit-transform-origin: 120px 120px 0;
+
         }
-
-        .face1 { -webkit-transform: translateZ(120px);                                }
-        .face2 { -webkit-transform: rotateY(90deg) translateZ(120px);                 }
-        .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(120px);  }
-        .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(120px); }
-        .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(120px); }
-        .face6 { -webkit-transform: rotateX(-90deg) translateZ(120px);                }
-
-        -webkit-transform-origin: 120px 120px 0;
-
     }
 }
 
