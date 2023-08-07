@@ -4,13 +4,18 @@
 @import "partials/footer";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+#loading-control:checked + label {
+    display: none;
+}
+
+
 .loading {
     animation: load-display 3s forwards;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    // background-color: black;
     left:0;
     top:0;
     width:100%;
@@ -42,6 +47,12 @@
             font-size: 100px;
         }
 
+        @media (hover:hover) {
+            div:hover {
+                background-color: #003A68;
+            }
+        }
+
         .face1 { -webkit-transform: translateZ(60px);                                }
         .face2 { -webkit-transform: rotateY(90deg) translateZ(60px);                 }
         .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);  }
@@ -56,23 +67,42 @@
         -webkit-transform-style: preserve-3d;
         -webkit-transform-origin: 60px 60px 0;
 
-    }   
+    }
+    
+    &__cube:hover {
+        div {
+            width: 240px;
+            height: 240px;
+            line-height: 240px;
+        }
+
+        .face1 { -webkit-transform: translateZ(120px);                                }
+        .face2 { -webkit-transform: rotateY(90deg) translateZ(120px);                 }
+        .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(120px);  }
+        .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(120px); }
+        .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(120px); }
+        .face6 { -webkit-transform: rotateX(-90deg) translateZ(120px);                }
+
+        -webkit-transform-origin: 120px 120px 0;
+
+    }
 }
 
-
-
-
-  @-webkit-keyframes spincube {
+@-webkit-keyframes spincube {
     from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
     16%      { -webkit-transform: rotateY(-90deg);                           }
     33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
     50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
     66%      { -webkit-transform: rotateY(90deg) rotateX(90deg);             }
     83%      { -webkit-transform: rotateX(90deg);                            }
-  }
+}
 
-  @keyframes load-display {
+@keyframes load-display {
     from {
+        // opacity: 1;
+    }
+
+    98% {
         max-height: 100%;
         width: 100%;
         
@@ -82,8 +112,7 @@
     99% {
         max-height: 100%;
         width: 100%;
-        
-        opacity: 1;
+        opacity: 0;
     }
 
     to {
@@ -92,7 +121,7 @@
        
         opacity: 0;
     }
-  }
+}
 
 
 
