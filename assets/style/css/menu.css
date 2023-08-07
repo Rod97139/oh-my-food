@@ -278,7 +278,7 @@ body main {
   position: absolute;
   transform: translateX(83%);
   right: 10px;
-  transition: right 0.5s ease-in-out;
+  transition: right 0.2s ease-in-out;
 }
 .menu__content__form__ingredient input[type=checkbox] + label .price-check .price {
   margin-top: 50px;
@@ -295,8 +295,12 @@ body main {
 .menu__content__form__ingredient input[type=checkbox] + label .price-check .check svg {
   margin: auto 10px auto 27px;
 }
+.menu__content__form__ingredient input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
 @media (hover: hover) {
-  .menu__content__form__ingredient input[type=checkbox]:hover + label .price-check {
+  .menu__content__form__ingredient input[type=checkbox]:hover:not(:focus) + label .price-check {
     right: 86px;
   }
 }

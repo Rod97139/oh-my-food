@@ -167,7 +167,7 @@
                         position: absolute;
                         transform: translateX(83%);
                         right: 10px;
-                        transition: right 0.5s ease-in-out;
+                        transition: right 0.2s ease-in-out;
 
                         .price {
                             margin-top: 50px;
@@ -191,10 +191,15 @@
                     }
                   
                 }
+
+                input[type="checkbox"] {
+                    opacity: 0;
+                    position: absolute;
+                }
                 
                 @media (hover: hover) {
 
-                    input[type="checkbox"]:hover + label {
+                    input[type="checkbox"]:hover:not(:focus) + label {
                         .price-check {
                             right: 86px;
                         }

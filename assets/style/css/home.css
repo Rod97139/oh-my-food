@@ -113,7 +113,7 @@ body main {
 
 .loading {
   animation: load-display 3s forwards;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,6 +124,10 @@ body main {
   z-index: 300;
 }
 .loading__cube {
+  position: absolute;
+  margin: auto;
+  top: 150px;
+  right: 50px;
   position: relative;
   -webkit-animation-name: spincube;
   -webkit-animation-timing-function: ease-in-out;
@@ -406,6 +410,10 @@ body main {
   margin-block: auto;
   margin-right: 20px;
 }
+.card .card-content .card-like input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
 .card .card-content .card-like input[type=checkbox]:checked + label .liked {
   animation: check 0.5s normal;
   top: 202.5px;
@@ -417,7 +425,25 @@ body main {
 .card .card-content .card-like input[type=checkbox]:not(:checked) + label .liked {
   top: 202.5px;
   right: 20.5px;
-  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+@media (hover: hover) {
+  .card .card-content .card-like input[type=checkbox]:not(:checked):not(:focus) + label:hover .liked {
+    transform: scale(1);
+    opacity: 100%;
+  }
+  .card .card-content .card-like input[type=checkbox]:not(:checked):not(:focus) + label:hover .unliked {
+    animation: disappear 0.5s forwards;
+  }
+}
+@keyframes disappear {
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */
