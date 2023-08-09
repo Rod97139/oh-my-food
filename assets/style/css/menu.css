@@ -300,7 +300,7 @@ body main {
   position: absolute;
 }
 @media (hover: hover) {
-  .menu__content__form__ingredient input[type=checkbox]:hover:not(:focus) + label .price-check {
+  .menu__content__form__ingredient input[type=checkbox]:hover + label .price-check {
     right: 86px;
   }
 }

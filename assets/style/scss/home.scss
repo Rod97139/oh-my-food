@@ -70,6 +70,7 @@
         -webkit-animation-timing-function: ease-in-out;
         -webkit-animation-iteration-count: initial;
         -webkit-animation-duration: 3s;
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style
         -webkit-transform-style: preserve-3d;
         -webkit-transform-origin: 60px 60px 0;
 
@@ -357,7 +358,7 @@
             }
 
             @media (hover:hover) {
-                input[type="checkbox"]:not(:checked):not(:focus) + label:hover {
+                input[type="checkbox"]:not(:checked) + label:hover {
                     
                     .liked {
                         transform: scale(1);

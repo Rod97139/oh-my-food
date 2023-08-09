@@ -433,11 +433,11 @@ body main {
   transition: transform 0.5s ease-in-out;
 }
 @media (hover: hover) {
-  .card .card-content .card-like input[type=checkbox]:not(:checked):not(:focus) + label:hover .liked {
+  .card .card-content .card-like input[type=checkbox]:not(:checked) + label:hover .liked {
     transform: scale(1);
     opacity: 100%;
   }
-  .card .card-content .card-like input[type=checkbox]:not(:checked):not(:focus) + label:hover .unliked {
+  .card .card-content .card-like input[type=checkbox]:not(:checked) + label:hover .unliked {
     animation: disappear 0.5s forwards;
   }
 }
