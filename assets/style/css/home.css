@@ -107,8 +107,19 @@ body main {
   }
 }
 
+#loading-control:checked ~ .loading__cube {
+  display: none;
+}
+
 #loading-control:checked + label {
   display: none;
+}
+
+#loading-control + label {
+  position: absolute;
+  width: 100%;
+  height: 2700px;
+  z-index: 300;
 }
 
 .loading {
@@ -124,10 +135,11 @@ body main {
   z-index: 300;
 }
 .loading__cube {
+  z-index: 301;
   position: absolute;
   margin: auto;
   top: 150px;
-  right: 50px;
+  right: 57px;
   position: relative;
   -webkit-animation-name: spincube;
   -webkit-animation-timing-function: ease-in-out;
@@ -153,11 +165,6 @@ body main {
   line-height: 120px;
   font-size: 100px;
 }
-@media (hover: hover) {
-  .loading__cube div:hover {
-    background-color: #003A68;
-  }
-}
 .loading__cube .face1 {
   -webkit-transform: translateZ(60px);
 }
@@ -175,34 +182,6 @@ body main {
 }
 .loading__cube .face6 {
   -webkit-transform: rotateX(-90deg) translateZ(60px);
-}
-@media (hover: hover) {
-  .loading__cube:hover {
-    -webkit-transform-origin: 120px 120px 0;
-  }
-  .loading__cube:hover div {
-    width: 240px;
-    height: 240px;
-    line-height: 240px;
-  }
-  .loading__cube:hover .face1 {
-    -webkit-transform: translateZ(120px);
-  }
-  .loading__cube:hover .face2 {
-    -webkit-transform: rotateY(90deg) translateZ(120px);
-  }
-  .loading__cube:hover .face3 {
-    -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(120px);
-  }
-  .loading__cube:hover .face4 {
-    -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(120px);
-  }
-  .loading__cube:hover .face5 {
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(120px);
-  }
-  .loading__cube:hover .face6 {
-    -webkit-transform: rotateX(-90deg) translateZ(120px);
-  }
 }
 
 @-webkit-keyframes spincube {
@@ -226,15 +205,18 @@ body main {
   }
 }
 @keyframes load-display {
-  98% {
-    max-height: 100%;
-    width: 100%;
+  70% {
     opacity: 1;
+  }
+  83% {
+    opacity: 0.5;
+  }
+  84% {
+    opacity: 0;
   }
   99% {
     max-height: 100%;
     width: 100%;
-    opacity: 0;
   }
   to {
     max-height: 0;
@@ -410,34 +392,39 @@ body main {
   margin: 18px;
   border-radius: 3px;
 }
-.card .card-content .card-like {
+.card .card-like {
   margin-block: auto;
   margin-right: 20px;
 }
-.card .card-content .card-like input[type=checkbox] {
+.card .card-like input[type=checkbox] {
   opacity: 0;
   position: absolute;
 }
-.card .card-content .card-like input[type=checkbox]:checked + label .liked {
-  animation: check 0.5s normal;
+.card .card-like input[type=checkbox] + label .unliked {
+  position: absolute;
   top: 202.5px;
   right: 20.5px;
 }
-.card .card-content .card-like input[type=checkbox]:checked + label .unliked {
+.card .card-like input[type=checkbox] + label .liked {
+  top: 202.5px;
+  right: 20.5px;
+}
+.card .card-like input[type=checkbox]:checked + label .liked {
+  animation: check 0.5s normal;
+}
+.card .card-like input[type=checkbox]:checked + label .unliked {
   opacity: 0%;
 }
-.card .card-content .card-like input[type=checkbox]:not(:checked) + label .liked {
-  top: 202.5px;
-  right: 20.5px;
+.card .card-like input[type=checkbox]:not(:checked) + label .liked {
   transform: scale(0);
   transition: transform 0.5s ease-in-out;
 }
 @media (hover: hover) {
-  .card .card-content .card-like input[type=checkbox]:not(:checked) + label:hover .liked {
+  .card .card-like input[type=checkbox]:not(:checked) + label:hover .liked {
     transform: scale(1);
     opacity: 100%;
   }
-  .card .card-content .card-like input[type=checkbox]:not(:checked) + label:hover .unliked {
+  .card .card-like input[type=checkbox]:not(:checked) + label:hover .unliked {
     animation: disappear 0.5s forwards;
   }
 }

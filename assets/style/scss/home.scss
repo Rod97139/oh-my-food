@@ -4,9 +4,25 @@
 @import "partials/footer";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
+#loading-control:checked ~ .loading__cube {
+    display: none;
+}
+
 #loading-control:checked + label {
     display: none;
 }
+
+
+
+#loading-control + label {
+    position: absolute;
+    // background-color: black;
+    width: 100%;
+    height: 2700px;
+    z-index: 300;
+}
+
 
 
 .loading {
@@ -26,10 +42,11 @@
     z-index:300;
 
     &__cube {
+        z-index: 301;
         position: absolute;
         margin: auto;
         top: 150px;
-        right: 50px;
+        right: 57px;
 
         &__logo {
             width: 100px;
@@ -53,11 +70,6 @@
             font-size: 100px;
         }
 
-        @media (hover:hover) {
-            div:hover {
-                background-color: #003A68;
-            }
-        }
 
         .face1 { -webkit-transform: translateZ(60px);                                }
         .face2 { -webkit-transform: rotateY(90deg) translateZ(60px);                 }
@@ -75,26 +87,6 @@
         -webkit-transform-origin: 60px 60px 0;
 
     }
-    
-    @media (hover:hover) {
-        &__cube:hover {
-            div {
-                width: 240px;
-                height: 240px;
-                line-height: 240px;
-            }
-
-            .face1 { -webkit-transform: translateZ(120px);                                }
-            .face2 { -webkit-transform: rotateY(90deg) translateZ(120px);                 }
-            .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(120px);  }
-            .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(120px); }
-            .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(120px); }
-            .face6 { -webkit-transform: rotateX(-90deg) translateZ(120px);                }
-
-            -webkit-transform-origin: 120px 120px 0;
-
-        }
-    }
 }
 
 @-webkit-keyframes spincube {
@@ -111,17 +103,22 @@
         // opacity: 1;
     }
 
-    98% {
-        max-height: 100%;
-        width: 100%;
-        
+    70%{
         opacity: 1;
+    }
+
+    83% {
+        
+        opacity: 0.5;
+    }
+
+    84%{
+        opacity: 0;
     }
 
     99% {
         max-height: 100%;
         width: 100%;
-        opacity: 0;
     }
 
     to {
@@ -322,88 +319,102 @@
             border-radius: 3px;
 
         }
-        .card-like {
-            margin-block: auto;
-            margin-right: 20px;
+    }
 
-            input[type="checkbox"] {
-                opacity: 0;
+    .card-like {
+        margin-block: auto;
+        margin-right: 20px;
+
+        input[type="checkbox"] {
+            opacity: 0;
+            position: absolute;
+        }
+
+        input[type="checkbox"] +label {
+
+            .unliked {
                 position: absolute;
-            }
-            
-            input[type="checkbox"]:checked + label {
-
-                .liked {
-                    animation: check 0.5s normal;
-                    top: 202.5px;
-                    right: 20.5px;
-                }
-    
-                .unliked {
-                    opacity: 0%;
-                }
+                top: 202.5px;
+                right: 20.5px;
             }
 
+            .liked {
+                top: 202.5px;
+                right: 20.5px;
+            }
+        }
 
-            input[type="checkbox"]:not(:checked) + label {
+       
+        
+        input[type="checkbox"]:checked + label {
 
-                .liked {
-                    top: 202.5px;
-                    right: 20.5px;
-                    transform: scale(0);
-                    
-                    transition: transform .5s ease-in-out;
-                }
- 
+            .liked {
+                animation: check 0.5s normal;
             }
 
-            @media (hover:hover) {
-                input[type="checkbox"]:not(:checked) + label:hover {
-                    
-                    .liked {
-                        transform: scale(1);
-                        opacity: 100%;
-                    }
-                    
-                    .unliked {
-                        animation: disappear .5s forwards;
-                    }
-                }
+            .unliked {
+                opacity: 0%;
+            }
+        }
+
+
+        input[type="checkbox"]:not(:checked) + label {
+
+            .liked {
+                transform: scale(0);
+                transition: transform .5s ease-in-out;
             }
 
-            
-            @keyframes disappear {
-
-
-                50% {
-                    opacity: 1;
-                }
-
-                to {
-                    opacity: 0;
-                }                
-            }
-            
-
-          
-            // @for $i from 1 through 4 {
-
-            //     #like#{$i}:checked + #label#{$i} {
-
-            //         .liked {
-            //             display:block;
-            //             animation: check 0.5s normal;
-            //             top: 200px;
-            //         }
-    
-            //         .unliked {
-            //             opacity: 0%;
-            //         }
-            //     } 
-            // }
-
+           
 
         }
+
+        @media (hover:hover) {
+            input[type="checkbox"]:not(:checked) + label:hover {
+                
+                .liked {
+                    transform: scale(1);
+                    opacity: 100%;
+                }
+                
+                .unliked {
+                    animation: disappear .5s forwards;
+                }
+            }
+        }
+
+        
+        @keyframes disappear {
+
+
+            50% {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }                
+        }
+        
+
+      
+        // @for $i from 1 through 4 {
+
+        //     #like#{$i}:checked + #label#{$i} {
+
+        //         .liked {
+        //             display:block;
+        //             animation: check 0.5s normal;
+        //             top: 200px;
+        //         }
+
+        //         .unliked {
+        //             opacity: 0%;
+        //         }
+        //     } 
+        // }
+
+
     }
 }
 
