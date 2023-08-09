@@ -163,6 +163,17 @@
                         overflow: auto;
                         z-index: 1;
                         // flex-shrink: 0;
+                        &-title {
+                            display: block;
+                            
+                            margin: 15px 15px 15px 2px;
+                            font-size: 1rem;
+                            font-weight: 900;
+                        }
+                        &-description {
+                            margin: 15px 15px 15px 2px;
+
+                        }
                     }
 
                     .price-check {

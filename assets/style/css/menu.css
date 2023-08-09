@@ -272,6 +272,15 @@ body main {
   overflow: auto;
   z-index: 1;
 }
+.menu__content__form__ingredient input[type=checkbox] + label .name-title {
+  display: block;
+  margin: 15px 15px 15px 2px;
+  font-size: 1rem;
+  font-weight: 900;
+}
+.menu__content__form__ingredient input[type=checkbox] + label .name-description {
+  margin: 15px 15px 15px 2px;
+}
 .menu__content__form__ingredient input[type=checkbox] + label .price-check {
   z-index: 2;
   display: flex;
