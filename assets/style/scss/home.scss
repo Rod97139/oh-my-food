@@ -36,7 +36,7 @@
 
     &__progress {
         z-index: 300;
-        border: 1px solid #99E2D0;
+        border: 1px solid #003A68;
         width: 120px;
         height: 10px;
         position: absolute;
@@ -110,7 +110,7 @@
             svg {
                 position: absolute;
                 right: 10px;
-                top: 40px;
+                top: 38px;
             }
             
             position: absolute;
@@ -126,7 +126,6 @@
             font-size: 100px;
             font-family: 'Shrikhand', cursive;
             color: #99E2D0;
-            font-weight: 900;
         }
 
 
