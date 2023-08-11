@@ -30,7 +30,7 @@
         
         &__title {
             font-family: 'Shrikhand', cursive;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             display: flex;
             justify-content: space-around;
             box-sizing: border-box;
@@ -39,25 +39,53 @@
                 color: black;
             }
 
-            input[type="checkbox"]:checked + label {
+            input[type="checkbox"] + label {
+                
                 .like {
-                    display:block;
-                    animation: check 0.5s normal;
-                    top: 30px;
+                    top: 32px;
+                    // transform: scale(0);
+                    scale: 0;
+                    transition: scale .5s ease-in-out;
 
-                }
-                .heart {
-                    opacity: 0%;
                 }
             }
 
-            input[type="checkbox"]:not(:checked) + label {
+            input[type="checkbox"]:checked + label {
                 .like {
-                    opacity: 0;
+                    opacity: 100%;
+                    scale: 1;
+                    animation: check 0.5s normal;
+
+                }
+                .heart {
+                    animation: disappear .5s forwards;
+                }
+            }
+
+            // input[type="checkbox"]:not(:checked) + label {
+            //     .like {
+            //         // opacity: 100%;
+            //         transform: scale(0);
+            //         top: 30px;
+                
                     
-                    // transform: scale(0);
+            //         // transform: scale(0);
                     
-                    // transition: transform .5s ease-in-out;
+            //         // transition: transform .5s ease-in-out;
+            //     }
+            // }
+
+            @media (hover:hover) {
+                input[type="checkbox"]:not(:checked) + label:hover {
+                    
+                    .like {
+                        scale: 1;
+                        opacity: 100%;
+                    }
+                    
+                    .heart {
+                        animation: disappear .5s forwards;
+                    }
                 }
             }
 

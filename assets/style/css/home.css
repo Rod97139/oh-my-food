@@ -46,6 +46,14 @@
     transform: scale(1.2);
   }
 }
+@keyframes disappear {
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -471,14 +479,6 @@ body main {
   }
   .card .card-like input[type=checkbox]:not(:checked) + label:hover .unliked {
     animation: disappear 0.5s forwards;
-  }
-}
-@keyframes disappear {
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 

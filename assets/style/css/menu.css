@@ -46,6 +46,14 @@
     transform: scale(1.2);
   }
 }
+@keyframes disappear {
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -126,7 +134,7 @@ body main {
 }
 .menu__content__title {
   font-family: "Shrikhand", cursive;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
@@ -135,16 +143,27 @@ body main {
   text-decoration: none;
   color: black;
 }
+.menu__content__title input[type=checkbox] + label .like {
+  top: 32px;
+  scale: 0;
+  transition: scale 0.5s ease-in-out;
+}
 .menu__content__title input[type=checkbox]:checked + label .like {
-  display: block;
+  opacity: 100%;
+  scale: 1;
   animation: check 0.5s normal;
-  top: 30px;
 }
 .menu__content__title input[type=checkbox]:checked + label .heart {
-  opacity: 0%;
+  animation: disappear 0.5s forwards;
 }
-.menu__content__title input[type=checkbox]:not(:checked) + label .like {
-  opacity: 0;
+@media (hover: hover) {
+  .menu__content__title input[type=checkbox]:not(:checked) + label:hover .like {
+    scale: 1;
+    opacity: 100%;
+  }
+  .menu__content__title input[type=checkbox]:not(:checked) + label:hover .heart {
+    animation: disappear 0.5s forwards;
+  }
 }
 .menu__content__title h1 {
   flex-shrink: 0;
