@@ -334,7 +334,16 @@
     margin-block: 17px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     position: relative;
+    transition: box-shadow .2s ease-in-out;
 
+    @media (hover:hover) {
+        &:hover {
+            box-shadow: 0px 3px 15px #99E2D0;
+            
+                
+        }    
+    }
+    
     
     .card-image {
         object-fit: cover;
@@ -352,6 +361,8 @@
             flex-direction: column;
             margin-left: 20px;
             margin-bottom: 5px;
+            position: relative;
+            top: -10px;
 
             h3 {
                 margin-bottom: 0;
@@ -392,13 +403,13 @@
 
             .unliked {
                 position: absolute;
-                top: 202.5px;
-                right: 20.5px;
+                top: 193px;
+                right: 25px;
             }
 
             .liked {
-                top: 202.5px;
-                right: 20.5px;
+                top: 193px;
+                right: 25px;
             }
         }
 

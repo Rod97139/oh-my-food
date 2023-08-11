@@ -279,7 +279,7 @@ body main {
 .menu__content__form__ingredient__box input[type=checkbox] ~ .card-box {
   cursor: pointer;
   margin: 10px 20px 10px 10px;
-  height: 90px;
+  height: 69px;
   padding: 0 10px;
   background-color: white;
   border-radius: 20px;
@@ -296,23 +296,25 @@ body main {
 }
 .menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .name-title {
   display: block;
-  margin: 15px 15px 15px 2px;
+  margin: 11px 4px 10px 4px;
   font-size: 1rem;
   font-weight: 900;
 }
 .menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .name-description {
-  margin: 15px 15px 15px 2px;
+  margin: 0px 0px 0px 4px;
 }
 .menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .price-check {
   z-index: 2;
   display: flex;
   position: absolute;
   transform: translateX(83%);
+  top: -10px;
   right: 10px;
   transition: right 0.2s ease-in-out;
 }
 .menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .price-check .price {
-  margin-top: 50px;
+  font-weight: 800;
+  margin-top: 51px;
   margin-right: 10px;
   background-color: white;
   box-shadow: white -12px 0px, white 12px 0px, white 0px -5px;
@@ -324,7 +326,10 @@ body main {
   width: 92px;
 }
 .menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .price-check .check svg {
-  margin: auto 10px auto 27px;
+  margin: auto 40px auto 27px;
+  scale: 0.8;
+  position: relative;
+  right: 9px;
 }
 .menu__content__form__ingredient__box input[type=checkbox] + label {
   cursor: pointer;
@@ -338,17 +343,17 @@ body main {
 }
 @media (hover: hover) {
   .menu__content__form__ingredient__box input[type=checkbox]:hover ~ .card-box .price-check {
-    right: 86px;
+    right: 70px;
   }
 }
 .menu__content__form__ingredient__box input[type=checkbox]:checked ~ .card-box .name {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 62%;
+  width: 70%;
 }
 .menu__content__form__ingredient__box input[type=checkbox]:checked ~ .card-box .price-check {
-  right: 86px;
+  right: 70px;
 }
 @media (hover: hover) {
   .menu__content__form__ingredient__box input[type=checkbox]:checked ~ .card-box .price-check .check svg {
