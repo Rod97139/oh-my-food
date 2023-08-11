@@ -254,7 +254,10 @@ body main {
     opacity: 1;
   }
 }
-.menu__content__form__ingredient input[type=checkbox] + label {
+.menu__content__form__ingredient__box {
+  position: relative;
+}
+.menu__content__form__ingredient__box input[type=checkbox] ~ .card-box {
   cursor: pointer;
   margin: 10px 20px 10px 10px;
   height: 90px;
@@ -267,21 +270,21 @@ body main {
   position: relative;
   box-shadow: 2px 8px 15px #dfdfdf;
 }
-.menu__content__form__ingredient input[type=checkbox] + label .name {
+.menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .name {
   white-space: nowrap;
   overflow: auto;
   z-index: 1;
 }
-.menu__content__form__ingredient input[type=checkbox] + label .name-title {
+.menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .name-title {
   display: block;
   margin: 15px 15px 15px 2px;
   font-size: 1rem;
   font-weight: 900;
 }
-.menu__content__form__ingredient input[type=checkbox] + label .name-description {
+.menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .name-description {
   margin: 15px 15px 15px 2px;
 }
-.menu__content__form__ingredient input[type=checkbox] + label .price-check {
+.menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .price-check {
   z-index: 2;
   display: flex;
   position: absolute;
@@ -289,41 +292,47 @@ body main {
   right: 10px;
   transition: right 0.2s ease-in-out;
 }
-.menu__content__form__ingredient input[type=checkbox] + label .price-check .price {
+.menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .price-check .price {
   margin-top: 50px;
   margin-right: 10px;
   background-color: white;
   box-shadow: white -12px 0px, white 12px 0px, white 0px -5px;
 }
-.menu__content__form__ingredient input[type=checkbox] + label .price-check .check {
+.menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .price-check .check {
   background-color: #99E2D0;
   display: flex;
   height: 90px;
   width: 92px;
 }
-.menu__content__form__ingredient input[type=checkbox] + label .price-check .check svg {
+.menu__content__form__ingredient__box input[type=checkbox] ~ .card-box .price-check .check svg {
   margin: auto 10px auto 27px;
 }
-.menu__content__form__ingredient input[type=checkbox] {
-  opacity: 0;
+.menu__content__form__ingredient__box input[type=checkbox] + label {
+  cursor: pointer;
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 40%;
+  z-index: 300;
 }
 @media (hover: hover) {
-  .menu__content__form__ingredient input[type=checkbox]:hover + label .price-check {
+  .menu__content__form__ingredient__box input[type=checkbox]:hover ~ .card-box .price-check {
     right: 86px;
   }
 }
-.menu__content__form__ingredient input[type=checkbox]:checked + label .name {
+.menu__content__form__ingredient__box input[type=checkbox]:checked ~ .card-box .name {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   width: 62%;
 }
-.menu__content__form__ingredient input[type=checkbox]:checked + label .price-check {
+.menu__content__form__ingredient__box input[type=checkbox]:checked ~ .card-box .price-check {
   right: 86px;
 }
 @media (hover: hover) {
-  .menu__content__form__ingredient input[type=checkbox]:checked + label .price-check .check svg {
+  .menu__content__form__ingredient__box input[type=checkbox]:checked ~ .card-box .price-check .check svg {
     animation: check 0.1s ease-in-out;
   }
 }

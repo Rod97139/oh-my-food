@@ -140,123 +140,144 @@
                     }
                 }
 
-                input[type="checkbox"] + label {
-                    // width: 349px;
-                    // width: 100%;
-                    // max-width: 100%;
-                    cursor: pointer;
-                    margin: 10px 20px 10px 10px;
-                    height: 90px;
-                    padding: 0 10px;
-                    background-color: white;
-                    border-radius: 20px;
-                    display: flex;
-                    justify-content: space-between;
-                    overflow: hidden;
+               
+
+                &__box {
+
+                  
+
                     position: relative;
-                    box-shadow: 2px 8px 15px #dfdfdf; 
 
+                    input[type="checkbox"] ~ .card-box {
 
-                    .name {
-                        // text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: auto;
-                        z-index: 1;
-                        // flex-shrink: 0;
-                        &-title {
-                            display: block;
-                            
-                            margin: 15px 15px 15px 2px;
-                            font-size: 1rem;
-                            font-weight: 900;
-                        }
-                        &-description {
-                            margin: 15px 15px 15px 2px;
-
-                        }
-                    }
-
-                    .price-check {
-                        z-index: 2;
+                       
+                        // width: 349px;
+                        // width: 100%;
+                        // max-width: 100%;
+                        cursor: pointer;
+                        margin: 10px 20px 10px 10px;
+                        height: 90px;
+                        padding: 0 10px;
+                        background-color: white;
+                        border-radius: 20px;
                         display: flex;
-                        position: absolute;
-                        transform: translateX(83%);
-                        right: 10px;
-                        transition: right 0.2s ease-in-out;
+                        justify-content: space-between;
+                        overflow: hidden;
+                        position: relative;
+                        box-shadow: 2px 8px 15px #dfdfdf; 
 
-                        .price {
-                            margin-top: 50px;
-                            margin-right: 10px;
-                            background-color: white;
-                            box-shadow: white -12px 0px, white 12px 0px, white 0px -5px;
-                        }
-    
-                        .check {
-                          
-                            background-color: #99E2D0;
-                            display: flex;
-                            height: 90px;
-                            width: 92px;
 
-                            svg {
-                                margin: auto 10px auto 27px;
+                        .name {
+                            // text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: auto;
+                            z-index: 1;
+                            // flex-shrink: 0;
+                            &-title {
+                                display: block;
+                                
+                                margin: 15px 15px 15px 2px;
+                                font-size: 1rem;
+                                font-weight: 900;
+                            }
+                            &-description {
+                                margin: 15px 15px 15px 2px;
+
                             }
                         }
-                        
-                    }
-                  
-                }
 
-                input[type="checkbox"] {
-                    opacity: 0;
-                    position: absolute;
-                }
-                
-                @media (hover: hover) {
-
-                    input[type="checkbox"]:hover + label {
                         .price-check {
-                            right: 86px;
+                            z-index: 2;
+                            display: flex;
+                            position: absolute;
+                            transform: translateX(83%);
+                            right: 10px;
+                            transition: right 0.2s ease-in-out;
+
+                            .price {
+                                margin-top: 50px;
+                                margin-right: 10px;
+                                background-color: white;
+                                box-shadow: white -12px 0px, white 12px 0px, white 0px -5px;
+                            }
+        
+                            .check {
+                            
+                                background-color: #99E2D0;
+                                display: flex;
+                                height: 90px;
+                                width: 92px;
+
+                                svg {
+                                    margin: auto 10px auto 27px;
+                                }
+                            }
+                            
+                        }
+                    
+                    }
+
+                    input[type="checkbox"] + label {
+                        cursor: pointer;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        // width: 100%;
+                        // height: 100%;
+                        // background-color: red;
+                        opacity: 40%;
+                        z-index: 300;
+                    }
+                
+                    @media (hover: hover) {
+
+                        input[type="checkbox"]:hover ~ .card-box {
+                            .price-check {
+                                right: 86px;
+                            }
                         }
                     }
-                }
 
 
-                input[type="checkbox"]:checked + label {
+                    input[type="checkbox"]:checked ~ .card-box {
 
-                    .name {
-                        // trois petits points
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        width:62%;
-                    }
+                        .name {
+                            // trois petits points
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            width:62%;
+                        }
 
-                    .price-check {
-                        right: 86px;
-                        
-                        .check {
-                            svg {
-                                @media (hover: hover) {
-                                animation: check 0.1s ease-in-out;
+                        .price-check {
+                            right: 86px;
+                            
+                            .check {
+                                svg {
+                                    @media (hover: hover) {
+                                    animation: check 0.1s ease-in-out;
+                                    }
                                 }
                             }
                         }
                     }
+
+                    // input[type="checkbox"]:not(:checked) + label {
+
+                    //     .price-check {
+
+                    //         .check {
+                    //             @media (hover: hover) {
+                    //             animation: check 0.1s normal;
+                    //             }
+                    //             animation: check 0.5s normal;
+                    //         }
+                    //     }
+                    // }
+                
                 }
-
-                // input[type="checkbox"]:not(:checked) + label {
-
-                //     .price-check {
-
-                //         .check {
-                //             @media (hover: hover) {
-                //             animation: check 0.1s normal;
-                //             }
-                //             animation: check 0.5s normal;
-                //         }
-                //     }
-                // }
 
                 .command {
                     width: 186px;
