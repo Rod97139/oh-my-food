@@ -438,19 +438,19 @@
 
         }
 
-        @media (hover:hover) {
-            input[type="checkbox"]:not(:checked) + label:hover {
+        // @media (hover:hover) {
+        //     input[type="checkbox"]:not(:checked) + label:hover {
                 
-                .liked {
-                    transform: scale(1);
-                    opacity: 100%;
-                }
+        //         .liked {
+        //             transform: scale(1);
+        //             opacity: 100%;
+        //         }
                 
-                .unliked {
-                    animation: disappear .5s forwards;
-                }
-            }
-        }
+        //         .unliked {
+        //             animation: disappear .5s forwards;
+        //         }
+        //     }
+        // }
 
         
       

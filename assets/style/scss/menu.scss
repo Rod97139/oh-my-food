@@ -75,19 +75,19 @@
             //     }
             // }
 
-            @media (hover:hover) {
-                input[type="checkbox"]:not(:checked) + label:hover {
+            // @media (hover:hover) {
+            //     input[type="checkbox"]:not(:checked) + label:hover {
                     
-                    .like {
-                        scale: 1;
-                        opacity: 100%;
-                    }
+            //         .like {
+            //             scale: 1;
+            //             opacity: 100%;
+            //         }
                     
-                    .heart {
-                        animation: disappear .5s forwards;
-                    }
-                }
-            }
+            //         .heart {
+            //             animation: disappear .5s forwards;
+            //         }
+            //     }
+            // }
 
 
             

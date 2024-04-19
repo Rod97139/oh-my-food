@@ -156,15 +156,6 @@ body main {
 .menu__content__title input[type=checkbox]:checked + label .heart {
   animation: disappear 0.5s forwards;
 }
-@media (hover: hover) {
-  .menu__content__title input[type=checkbox]:not(:checked) + label:hover .like {
-    scale: 1;
-    opacity: 100%;
-  }
-  .menu__content__title input[type=checkbox]:not(:checked) + label:hover .heart {
-    animation: disappear 0.5s forwards;
-  }
-}
 .menu__content__title h1 {
   flex-shrink: 0;
   margin-right: 1.6rem;

@@ -480,14 +480,5 @@ body main {
   transform: scale(0);
   transition: transform 0.5s ease-in-out;
 }
-@media (hover: hover) {
-  .card .card-like input[type=checkbox]:not(:checked) + label:hover .liked {
-    transform: scale(1);
-    opacity: 100%;
-  }
-  .card .card-like input[type=checkbox]:not(:checked) + label:hover .unliked {
-    animation: disappear 0.5s forwards;
-  }
-}
 
 /*# sourceMappingURL=home.css.map */
